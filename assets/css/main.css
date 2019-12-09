@@ -86,7 +86,7 @@ input, select, textarea {
 		background: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 19pt;
-		font-weight: 300;
+		font-weight: 600;
 		line-height: 1.75em;
 		color: #888;
 	}
@@ -111,7 +111,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-weight: 600;
 		color: #666;
 		line-height: 1.5em;
 	}
@@ -131,11 +131,11 @@ input, select, textarea {
 	}
 
 		h2.alt {
-			color: #888;
+			color: rgb(0, 0, 0);
 		}
 
 			h2.alt strong {
-				color: #666;
+				color: rgb(32, 32, 32);
 			}
 
 	h3 {
@@ -2233,8 +2233,8 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				/* background-color: #81918E;
-				background-image: url("../../images/banner.jpg"); */
+				background-color: #81918E;
+				background-image: url("../../images/banner.jpg");
 				
 			}
 
@@ -2623,7 +2623,7 @@ input, select, textarea {
 		bottom: 0;
 		min-width: 300px; 
 		min-height: 300px;
-		opacity: 0.2;
+		opacity: 0.4;
 	}
 	
 	#top .container header {
@@ -2641,12 +2641,12 @@ input, select, textarea {
 		font-size: 18px;
 		padding: 10px;
 		border: none;
-		background: #000;
+		background: rgb(66, 66, 66);
 		color: #fff;
 		cursor: pointer;
 	}
 	
 	#top .container header #myBtn:hover {
 		background: #ddd;
-		color: lightcyan;
+		color: black;
 	}
