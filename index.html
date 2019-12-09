@@ -9,21 +9,7 @@
 		<title>Prologue by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
-		<link rel="stylesheet" href="assets/css/base.css" />
-		<link rel="stylesheet" href="assets/css/layout.css" />
-		<link rel="stylesheet" href="assets/css/modules/button.css" />
-		<link rel="stylesheet" href="assets/css/modules/container.css" />
-		<link rel="stylesheet" href="assets/css/modules/footer.css" />
-		<link rel="stylesheet" href="assets/css/modules/form.css" />
-		<link rel="stylesheet" href="assets/css/modules/header.css" />
-		<link rel="stylesheet" href="assets/css/modules/image.css" />
-		<link rel="stylesheet" href="assets/css/modules/item-icon.css" />
-		<link rel="stylesheet" href="assets/css/modules/list.css" />
-		<link rel="stylesheet" href="assets/css/modules/main.css" />
-		<link rel="stylesheet" href="assets/css/modules/row.css" />
-		<link rel="stylesheet" href="assets/css/modules/section-article.css" />
-		<link rel="stylesheet" href="assets/css/modules/table.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
 	</head>
 	<body class="is-preload">
@@ -72,13 +58,17 @@
 			<div id="main">
 
 				<!-- Intro -->
-					<section id="top" class="one dark cover">
+					<section id="top">
+						<video autoplay muted loop id="myVideo">
+							<source src="images/video.mp4" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
 						<div class="container">
-
 							<header>
 								<h2 class="alt">Hi! I'm <strong>Crystal</strong>, a Full Stack Software Engineer with a passion for learning new web technologies
 									and creating web applications efficiently.<br /></h2>
 								<p>With the ability to bring concepts to life and providing solutions to everyday problems.</p>
+								<button id="myBtn" onclick="myFunction()">Pause</button>
 							</header>
 
 							<footer>
@@ -198,15 +188,29 @@
 					</ul>
 
 			</div>
-
+		<!-- CDN -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollex/0.2.1/jquery.scrollex.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js"></script>
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			var video = document.getElementById("myVideo");
+			var btn = document.getElementById("myBtn");
+			
+			function myFunction() {
+				if (video.paused) {
+					video.play();
+					btn.innerHTML = "Pause";
+				} else {
+					video.pause();
+					btn.innerHTML = "Play";
+				}
+			}
+		</script>
 	</body>
 </html>
